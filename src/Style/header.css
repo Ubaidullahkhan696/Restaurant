@@ -1,0 +1,139 @@
+/* === Default (Desktop) === */
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0f172b;
+  height: 70px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  padding: 0 20px;
+}
+
+.logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo img {
+  height: 50px;
+}
+
+.logo h3{
+  color: #452e17;
+  font-size: 26px;
+  margin-top: 20px;
+}
+
+.navItems ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navItems li {
+  list-style: none;
+  padding-right: 20px;
+}
+
+/* --- Link style + hover effect --- */
+.navItems li a {
+  position: relative;
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+/* underline animation */
+.navItems li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background-color: #fea116; /* accent color */
+  transition: width 0.3s ease;
+}
+
+.navItems li a:hover {
+  color: #fea116;          /* text color change */
+}
+
+.navItems li a:hover::after {
+  width: 100%;             /* grow underline */
+}
+
+.burger {
+  display: none;
+  font-size: 35px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+
+/* === Tablet (768px – 1024px) === */
+@media (max-width: 1024px) and (min-width: 768px) {
+  .burger {
+    display: block;
+  }
+
+  .navItems {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 60%;
+    background-color: #0f172b;
+    padding: 20px;
+  }
+
+  .navItems.open {
+    display: block;
+  }
+
+  .navItems ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .navItems li a {
+    font-size: 18px;
+  }
+}
+
+/* === Mobile (up to 767px) === */
+@media (max-width: 767px) {
+  .burger {
+    display: block;
+  }
+
+  .navItems {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #0f172b;
+    padding: 40px 20px;
+  }
+
+  .navItems.open {
+    display: block;
+  }
+
+  .navItems ul {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .navItems li a {
+    font-size: 20px;
+  }
+}

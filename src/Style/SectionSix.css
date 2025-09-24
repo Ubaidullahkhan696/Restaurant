@@ -1,0 +1,148 @@
+.member-title {
+  text-align: center;
+}
+
+.main-member-title {
+  color: #ffb400;
+}
+
+.Chefs-title {
+  margin-top: -67px;
+  font-size: 35px;
+  margin-bottom: 60px;
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.card {
+  position: relative;
+  width: 260px;
+  height: 350px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 11px 50px rgba(34, 1, 1, 0.1);
+  text-align: center;
+  overflow: hidden;
+}
+
+.profile-img {
+  position: relative;
+  overflow: hidden;
+  width: 75%;
+  height: 200px;
+  border-radius: 50%;
+  margin: 20px auto 10px;
+}
+
+.profile-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Zoom effect on hover */
+.card:hover .profile-img img {
+  transform: scale(1.1); /* Slight zoom */
+}
+
+/* Card Content */
+.card-content {
+  padding: 10px 0;
+}
+
+.card-content .name {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 0;
+  border: none;
+}
+
+.card-content .designation {
+  font-size: 0.9em;
+  color: #888;
+  margin-top: 5px;
+}
+
+/* Social Icons */
+.social-icons {
+  position: absolute;
+  bottom: -80px; /* Initially hidden below the card */
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  transition: bottom 0.3s ease-in-out;
+}
+
+.card:hover .social-icons {
+  bottom: -2px; /* Slide up on hover */
+}
+
+.social-icons .icon {
+  background-color: #ffb400; /* Yellow background */
+  color: #fff;
+  font-size: 1.2em;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+/* Icon hover effect */
+.social-icons .icon:hover {
+  background-color: #333; /* Dark background on hover */
+  color: #fff;
+  transform: scale(1.1);
+}
+
+
+
+/* Default (Desktop) */
+.card-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap; /* allow wrapping */
+  gap: 20px; /* spacing between cards */
+}
+
+/* Tablet: show 2 cards */
+@media (max-width: 1024px) {
+  .card-container {
+    justify-content: center;
+  }
+
+  .card {
+    width: 45%; /* 2 cards per row */
+    max-width: 300px;
+  }
+}
+
+/* Mobile: show 1 card */
+@media (max-width: 600px) {
+  .card-container {
+    margin-top: -40px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%; /* full width but with margin */
+    max-width: 350px;
+  }
+}
+

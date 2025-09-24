@@ -1,0 +1,193 @@
+.main-food {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding-top: 130px;
+}
+
+.food {
+  font-size: 30px;
+  font-weight: 400;
+  color: orange;
+}
+
+.most-popular {
+  font-size: 30px;
+  margin-top: 20px;
+}
+
+.category {
+  display: flex;
+  width: 182px;
+  margin-left: 41%;
+}
+
+.category-type p {
+  margin-left: 20px;
+  cursor: pointer;
+  border-bottom: 2px solid gray;
+}
+
+.category-type p:active {
+  border-bottom: 2px solid orange;
+}
+
+.main-menu {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-menu-divide {
+  display: flex;
+  gap: 80px;
+}
+
+.row-1 {
+  width: 50%;
+}
+
+.row-2 {
+  width: 50%;
+}
+
+.items {
+  display: flex;
+  padding-bottom: 10px;
+}
+
+.item-pic {
+  width: auto;
+  border-radius: 2px;
+  padding-right: 10px;
+}
+
+.name {
+  padding-top: 0.6rem;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2px;
+  border-bottom: 2px solid lightgray;
+  width: 330px;
+}
+
+.name h5 {
+  font-size: 20px;
+}
+
+.name h4 {
+  font-size: 20px;
+  color: orange;
+}
+
+.desciption {
+  margin-top: 6px;
+}
+
+.line {
+  width: 100%;
+}
+
+/* === Tablet (768px – 1024px) === */
+@media (max-width: 1024px) and (min-width: 768px) {
+
+
+  .main-menu-divide {
+    flex-direction: column;
+    gap: 1px;
+    width: 100%;
+    padding: 0 20px;
+    align-items: center; /* Center rows */
+    text-align: center; /* Center text */
+  }
+
+  .row-1,
+  .row-2 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items */
+  }
+
+  /* Increase image size */
+  .item-pic {
+    width: 120px;
+    height: auto;
+  }
+
+  /* Increase name/description font */
+  .name h3 {
+    font-size: 2rem;
+  }
+
+  .name p {
+    font-size: 2rem;
+  }
+
+  /* Increase price font */
+  .price {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+}
+
+/* === Mobile (up to 767px) === */
+@media (max-width: 767px) {
+
+  .most-popular h2{
+    font-size: 30px;
+  }
+
+  .category {
+  display: flex;
+  width: 182px;
+  margin-left: 16%;
+}
+
+    .main-menu-divide {
+    flex-direction: column;
+    gap: 1px;
+    width: 100%;
+    padding: 0 20px;
+    align-items: center; /* Center rows */
+    text-align: center; /* Center text */
+  }
+
+  .row-1,
+  .row-2 {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items */
+  }
+
+  /* Increase image size */
+  .item-pic {
+    width: 100px;
+    height: auto;
+  }
+
+  .name{
+    width: 200px;
+  }
+
+
+
+  /* Increase name/description font */
+  .name h3 {
+    font-size: 1rem;
+  }
+
+  .name p {
+    font-size: 1rem;
+  }
+
+  /* Increase price font */
+  .price {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+}
+
+

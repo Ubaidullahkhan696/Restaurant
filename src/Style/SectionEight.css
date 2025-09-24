@@ -1,0 +1,180 @@
+.main-footer {
+  background-color: #0f172b;
+  margin-top: 90px;
+  color: white;
+}
+
+.footer-one {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.footer-card-title {
+  color: orange;
+  margin-bottom: 5px;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  padding: 5px;
+}
+
+.company-itms a {
+  text-decoration: none;
+  color: white;
+}
+
+.address {
+  padding: 8px;
+}
+
+.footer-contact-icons {
+  margin-top: 5px;
+}
+
+.footer-contact-icons .fab {
+  font-size: 20px;
+  padding: 8px;
+  margin: 3px;
+  border: 1px solid white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.footer-contact-icons .fab:hover{
+    background-color: white;
+    color: orange;
+}
+
+.days {
+  font-size: 20px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+.newslatter-def {
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+#footer-input {
+  margin-top: 30px;
+  padding: 15px;
+  font-size: 15px;
+  border-color: orange;
+}
+
+.signup-btn {
+  position: relative;
+  right: 122px;
+  top: 1px;
+  font-size: 20px;
+}
+
+.copy-right-area {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 100px;
+  border-top: 1px solid gray;
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+.copy-right-items {
+  display: flex;
+}
+
+.copy-right-items li a {
+  text-decoration: none;
+  color: white;
+  padding: 5px;
+  border-left: 1px solid white;
+  padding-left: 6px;
+}
+
+.copy-right a {
+  text-decoration: none;
+  color: white;
+}
+
+
+
+/* Default (Desktop: 4 cards in a row) */
+.footer-one {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex-wrap: wrap; /* allow wrapping */
+  gap: 30px; /* spacing between cards */
+}
+
+/* Tablet: 2 cards in a row */
+@media (max-width: 1024px) {
+  .footer-card {
+    flex: 0 0 45%; /* 2 cards per row */
+    max-width: 45%;
+  }
+
+  .copy-right-area {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .copy-right-items {
+    margin-top: 10px;
+  }
+}
+
+/* Mobile: 1 card per row */
+@media (max-width: 600px) {
+  .footer-card {
+    flex: 0 0 100%; /* full width */
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .footer-one {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #footer-input {
+    width: 90%;
+    margin-bottom: -40px;
+  }
+
+  .signup-btn {
+    position: static; /* reset absolute shift */
+    width: 50%;
+  }
+
+  .copy-right-area {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .copy-right-items {
+    flex-direction: row;
+    gap: 5px;
+    margin-top: 10px;
+  }
+}
